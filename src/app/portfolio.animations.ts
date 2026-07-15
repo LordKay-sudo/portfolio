@@ -9,26 +9,24 @@ import {
 
 const enterEase = 'cubic-bezier(0.22, 1, 0.36, 1)';
 const enterDuration = '460ms';
-const staggerDelay = 72;
+const staggerDelay = 90;
 
-/** Staggered reveal for project cards (complements skill-pill animation). */
-export const projectsGridEnter = trigger('projectsGridEnter', [
+/** Staggered reveal for featured-work rows. */
+export const projectsListEnter = trigger('projectsListEnter', [
   transition(':enter', [
     query(
-      '.project-card',
+      '.featured-row',
       [
         style({
           opacity: 0,
-          transform: 'translate3d(0, 1.4rem, 0) scale(0.97)',
-          filter: 'blur(4px)',
+          transform: 'translate3d(0, 1.1rem, 0)',
         }),
         stagger(`${staggerDelay}ms`, [
           animate(
             `${enterDuration} ${enterEase}`,
             style({
               opacity: 1,
-              transform: 'translate3d(0, 0, 0) scale(1)',
-              filter: 'blur(0)',
+              transform: 'translate3d(0, 0, 0)',
             }),
           ),
         ]),

@@ -16,10 +16,11 @@ describe('App', () => {
     expect(app).toBeTruthy();
   });
 
-  it('should render headline', async () => {
+  it('should render brand and headline', async () => {
     const fixture = TestBed.createComponent(App);
     await fixture.whenStable();
     const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('.brand')?.textContent).toContain('Lordwill Kandiro');
     expect(compiled.querySelector('h1')?.textContent).toContain('Full-stack engineer');
   });
 });

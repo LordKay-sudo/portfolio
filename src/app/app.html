@@ -1,106 +1,191 @@
-<div class="shell">
-  <header class="hero">
-    <span class="hero-badge">Portfolio</span>
-    <h1>{{ headline }}</h1>
-    <p class="subtitle">{{ subtitle }}</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" [href]="githubUrl" target="_blank" rel="noopener noreferrer">
-        View on GitHub
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path
-            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 .99-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.31-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
-          />
-        </svg>
-      </a>
+<div class="page">
+  <nav class="nav" aria-label="Primary">
+    <a class="nav-brand" href="#top">{{ brand }}</a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a class="nav-cta" [href]="githubProfile" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-atmosphere" aria-hidden="true">
+      <div class="hero-grid"></div>
+      <div class="hero-orb hero-orb--a"></div>
+      <div class="hero-orb hero-orb--b"></div>
+    </div>
+
+    <div class="hero-copy">
+      <p class="brand">{{ brand }}</p>
+      <h1>{{ headline }}</h1>
+      <p class="lede">{{ subtitle }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#work">See featured work</a>
+        <a
+          class="btn btn-ghost"
+          [href]="githubProfile"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub profile
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 .99-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.31-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+            />
+          </svg>
+        </a>
+      </div>
+      <div class="stack-strip" aria-hidden="true">
+        <span>Angular</span>
+        <span>Spring Boot</span>
+        <span>Secure APIs</span>
+      </div>
+    </div>
+
+    <div class="stack-visual" aria-hidden="true">
+      <div class="stack-plane stack-plane--1">
+        <span>UI</span>
+        <em>Angular · TypeScript</em>
+      </div>
+      <div class="stack-plane stack-plane--2">
+        <span>API</span>
+        <em>Spring Boot · REST</em>
+      </div>
+      <div class="stack-plane stack-plane--3">
+        <span>DATA</span>
+        <em>SQL · Flyway · Cloud</em>
+      </div>
     </div>
   </header>
 
-  <section class="section" aria-labelledby="about-heading">
-    <h2 id="about-heading">About</h2>
-    <p class="summary">{{ summary }}</p>
-  </section>
+  <main>
+    <section class="section" aria-labelledby="about-heading">
+      <div class="section-head">
+        <h2 id="about-heading">About</h2>
+        <p class="section-kicker">How I show up in production systems</p>
+      </div>
+      <p class="summary">{{ summary }}</p>
+    </section>
 
-  <section class="section" aria-labelledby="skills-heading">
-    <h2 id="skills-heading">Skills &amp; stack</h2>
-    <div class="pill-group" role="list" @skillsListEnter>
-      @for (item of skills(); track item.title) {
-        @if (item.link) {
-          <a
-            class="pill skill-pill"
-            role="listitem"
-            [href]="item.link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {{ item.title }}
-          </a>
-        } @else {
-          <span class="pill skill-pill" role="listitem">{{ item.title }}</span>
+    <section class="section" id="work" aria-labelledby="work-heading">
+      <div class="section-head">
+        <h2 id="work-heading">Featured work</h2>
+        <p class="section-kicker">Public repos you can open and inspect</p>
+      </div>
+      <ul class="featured-list" @projectsListEnter>
+        @for (item of featured(); track item.title) {
+          <li>
+            <a class="featured-row" [href]="item.href" target="_blank" rel="noopener noreferrer">
+              <div class="featured-main">
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.description }}</p>
+              </div>
+              <div class="featured-meta">
+                <span>{{ item.stack }}</span>
+                <span class="featured-arrow" aria-hidden="true">→</span>
+              </div>
+            </a>
+          </li>
         }
-      }
-    </div>
-  </section>
+      </ul>
+    </section>
 
-  <section class="section section-projects" aria-labelledby="projects-heading">
-    <h2 id="projects-heading">Selected projects</h2>
-    <p class="section-lede">
-      Delivery highlights from enterprise platforms—mirroring the selected-project scope from my resume.
-    </p>
-    <div class="projects-bento" @projectsGridEnter>
-      @for (p of projects(); track p.title) {
-        <article
-          class="project-card"
-          [class.project-card--featured]="p.featured === true"
-        >
-          <div class="project-card__accent" aria-hidden="true"></div>
-          <div class="project-card__inner">
-            <div class="project-card__tags">
-              @for (t of p.tags; track t) {
-                <span class="project-tag">{{ t }}</span>
-              }
+    <section class="section" aria-labelledby="skills-heading">
+      <div class="section-head">
+        <h2 id="skills-heading">Skills &amp; stack</h2>
+        <p class="section-kicker">Tools I use to ship and support platforms</p>
+      </div>
+      <div class="skill-rail" role="list" @skillsListEnter>
+        @for (item of skills(); track item.title) {
+          @if (item.link) {
+            <a
+              class="skill-pill"
+              role="listitem"
+              [href]="item.link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ item.title }}
+            </a>
+          } @else {
+            <span class="skill-pill" role="listitem">{{ item.title }}</span>
+          }
+        }
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-heading">
+      <div class="section-head">
+        <h2 id="projects-heading">Selected projects</h2>
+        <p class="section-kicker">Enterprise delivery highlights from production platforms</p>
+      </div>
+      <ol class="project-list">
+        @for (p of projects(); track p.title; let i = $index) {
+          <li class="project-row">
+            <span class="project-index" aria-hidden="true">{{ i + 1 < 10 ? '0' + (i + 1) : i + 1 }}</span>
+            <div class="project-body">
+              <div class="project-title-row">
+                <h3>{{ p.title }}</h3>
+                <span class="project-tags">{{ p.tags.join(' · ') }}</span>
+              </div>
+              <p>{{ p.description }}</p>
             </div>
-            <h3 class="project-card__title">{{ p.title }}</h3>
-            <p class="project-card__desc">{{ p.description }}</p>
-          </div>
-        </article>
-      }
-    </div>
-  </section>
+          </li>
+        }
+      </ol>
+    </section>
 
-  <section class="section" aria-labelledby="experience-heading">
-    <h2 id="experience-heading">Experience</h2>
-    <div class="timeline">
-      @for (job of experience(); track job.title + job.period) {
-        <article class="card">
-          <header>
-            <h3>{{ job.title }}</h3>
-            <p class="meta">{{ job.period }} · {{ job.context }}</p>
-          </header>
-          <ul>
-            @for (b of job.bullets; track b) {
-              <li>{{ b }}</li>
+    <section class="section" id="experience" aria-labelledby="experience-heading">
+      <div class="section-head">
+        <h2 id="experience-heading">Experience</h2>
+        <p class="section-kicker">Roles and the work that stuck</p>
+      </div>
+      <div class="timeline">
+        @for (job of experience(); track job.title + job.period) {
+          <article class="timeline-item">
+            <header>
+              <h3>{{ job.title }}</h3>
+              <p class="meta">{{ job.period }} · {{ job.context }}</p>
+            </header>
+            <ul>
+              @for (b of job.bullets; track b) {
+                <li>{{ b }}</li>
+              }
+            </ul>
+          </article>
+        }
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="education-heading">
+      <div class="section-head">
+        <h2 id="education-heading">Education</h2>
+        <p class="section-kicker">Foundation under the stack</p>
+      </div>
+      <ul class="edu-list">
+        @for (row of education(); track row.line) {
+          <li>
+            <span class="line">{{ row.line }}</span>
+            @if (row.detail) {
+              <span class="detail">{{ row.detail }}</span>
             }
-          </ul>
-        </article>
-      }
-    </div>
-  </section>
-
-  <section class="section" aria-labelledby="education-heading">
-    <h2 id="education-heading">Education</h2>
-    <ul class="edu-list">
-      @for (row of education(); track row.line) {
-        <li>
-          <span class="line">{{ row.line }}</span>
-          <span class="detail">{{ row.detail }}</span>
-        </li>
-      }
-    </ul>
-  </section>
+          </li>
+        }
+      </ul>
+    </section>
+  </main>
 
   <footer class="site-footer">
-    Source for this site:
-    <a [href]="githubUrl" target="_blank" rel="noopener noreferrer">{{ githubUrl }}</a>
+    <p>
+      <span class="footer-brand">{{ brand }}</span>
+      — building systems that hold up in production.
+    </p>
+    <p class="footer-links">
+      <a [href]="'mailto:' + email">{{ email }}</a>
+      <a [href]="githubProfile" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a [href]="githubUrl" target="_blank" rel="noopener noreferrer">Site source</a>
+    </p>
   </footer>
 </div>
 

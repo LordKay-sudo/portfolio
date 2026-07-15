@@ -1,14 +1,20 @@
 /**
  * Portfolio copy derived from CV (generic no-references resume / PDF).
- * Personal name, references, phone, email, and location are omitted for the public site.
+ * Name is the brand signal; email is the only contact detail on the public site.
  */
+
+export const BRAND_NAME = 'Lordwill Kandiro';
+
+export const CONTACT_EMAIL = 'lkandiro@gmail.com';
+
+export const GITHUB_PROFILE_URL = 'https://github.com/LordKay-sudo';
 
 export const GITHUB_REPO_URL = 'https://github.com/LordKay-sudo/portfolio';
 
 export const HERO_HEADLINE = 'Full-stack engineer';
 
 export const HERO_SUBTITLE =
-  'Angular · Spring · secure APIs · cloud & integrations';
+  'I build production platforms with Spring Boot, Angular, and secure APIs—ERP workflows, integrations, and AI-assisted document systems that stay reliable in live environments.';
 
 export const SUMMARY =
   'Full-stack developer with 5+ years building and supporting enterprise web platforms using Spring Boot, Spring Data JPA, Hibernate, Angular, and relational databases. Delivers ERP modules, financial and operations workflows, and secure API-driven integrations across multiple domains—with solid backend architecture, frontend delivery, cloud-enabled deployments, and long-term production support.';
@@ -28,7 +34,6 @@ export const SKILL_CHIPS: readonly SkillChip[] = [
   { title: 'Angular', link: 'https://angular.dev' },
   { title: 'TypeScript', link: 'https://www.typescriptlang.org' },
   { title: 'HTML / CSS', link: null },
-  { title: 'Angular Material', link: 'https://material.angular.dev' },
   { title: 'MySQL', link: 'https://www.mysql.com' },
   { title: 'PostgreSQL', link: 'https://www.postgresql.org' },
   { title: 'MongoDB', link: 'https://www.mongodb.com' },
@@ -45,14 +50,43 @@ export const SKILL_CHIPS: readonly SkillChip[] = [
   { title: 'Python', link: 'https://www.python.org' },
 ];
 
+/** Public / open-source pieces that hiring managers can click through. */
+export interface FeaturedWork {
+  readonly title: string;
+  readonly description: string;
+  readonly href: string;
+  readonly stack: string;
+}
+
+export const FEATURED_WORK: readonly FeaturedWork[] = [
+  {
+    title: 'BioInsight Graph',
+    description:
+      'Disease–target knowledge graph with FastAPI, Neo4j, and a React explorer—ranked associations, provenance, and literature-aware retrieval demos.',
+    href: 'https://github.com/LordKay-sudo/bioinsight-graph',
+    stack: 'FastAPI · Neo4j · React',
+  },
+  {
+    title: 'GapForge',
+    description:
+      'Translational gap hunter that proposes literature- and graph-backed hypotheses for stalled programs—agents propose, humans dispose.',
+    href: 'https://github.com/LordKay-sudo/gapforge',
+    stack: 'Python · Agents · Graph',
+  },
+  {
+    title: 'PeerLens',
+    description:
+      'Open infrastructure for transparent research quality signals—explainable automated checks, Crossref/arXiv ingest, and cited RAG Q&A on papers.',
+    href: 'https://github.com/LordKay-sudo/peerlens',
+    stack: 'FastAPI · RAG · Web UI',
+  },
+];
+
 /** Selected projects — aligned with generic resume (PDF) “Selected Projects”. */
 export interface SelectedProject {
   readonly title: string;
   readonly description: string;
-  /** Short labels for the card ribbon (visual only). */
   readonly tags: readonly string[];
-  /** Larger “feature” tiles on wide screens when true. */
-  readonly featured?: boolean;
 }
 
 export const SELECTED_PROJECTS: readonly SelectedProject[] = [
@@ -61,7 +95,6 @@ export const SELECTED_PROJECTS: readonly SelectedProject[] = [
     description:
       'ERP flows for sales and purchase orders—approvals, status traceability, and operational controls in live environments.',
     tags: ['ERP', 'Workflows'],
-    featured: true,
   },
   {
     title: 'Document-integrated transactions',
@@ -104,7 +137,6 @@ export const SELECTED_PROJECTS: readonly SelectedProject[] = [
     description:
       'Configurable, tenant-aware modules with role-based access and process separation across organizations.',
     tags: ['Multi-tenant', 'SaaS'],
-    featured: true,
   },
   {
     title: 'Card processing & monitoring',
@@ -124,7 +156,7 @@ export interface ExperienceItem {
 export const EXPERIENCE: readonly ExperienceItem[] = [
   {
     title: 'Full-stack software developer',
-    period: 'Oct 2020 – present',
+    period: '2020 – 2026',
     context: 'Enterprise product & services team',
     bullets: [
       'Design, develop, implement, and support full-stack applications with Spring Boot and Angular in production.',
@@ -138,7 +170,7 @@ export const EXPERIENCE: readonly ExperienceItem[] = [
   {
     title: 'Marketing & IT intern',
     period: 'Jan 2014 – Jan 2015',
-    context: 'Higher-education institution',
+    context: 'Tertiary institution',
     bullets: [
       'Website and social content operations.',
       'System analysis, design, and implementation support for internal IT projects.',
@@ -150,10 +182,10 @@ export const EXPERIENCE: readonly ExperienceItem[] = [
 export const EDUCATION: readonly { line: string; detail: string }[] = [
   {
     line: "Bachelor's (Honours), Business Management & Information Technology",
-    detail: '2012 – 2015',
+    detail: '',
   },
   {
-    line: 'Advanced Level — Mathematics & Physics',
-    detail: '2005 – 2010',
+    line: "Churchill Boys' School",
+    detail: '',
   },
 ];
