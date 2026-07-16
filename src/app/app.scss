@@ -1,14 +1,14 @@
 :host {
-  --bg: #0b1210;
-  --bg-elevated: #121a17;
-  --ink: #ebe6dc;
-  --muted: #9a968c;
-  --line: color-mix(in srgb, #ebe6dc 12%, transparent);
-  --accent: #c4a35a;
-  --accent-soft: #7d9b84;
-  --accent-hot: #e8c56a;
-  --glow-a: rgba(125, 155, 132, 0.28);
-  --glow-b: rgba(196, 163, 90, 0.22);
+  --bg: #070912;
+  --bg-elevated: #111527;
+  --ink: #eef1ff;
+  --muted: #9aa3c2;
+  --line: color-mix(in srgb, #eef1ff 12%, transparent);
+  --accent: #7c5cff;
+  --accent-soft: #6eb6ff;
+  --accent-hot: #a78bfa;
+  --glow-a: rgba(124, 92, 255, 0.38);
+  --glow-b: rgba(86, 180, 255, 0.3);
 
   --font-display: 'Syne', sans-serif;
   --font-body: 'Figtree', sans-serif;
@@ -97,9 +97,9 @@
   z-index: -1;
   overflow: hidden;
   background:
-    radial-gradient(90% 70% at 85% 15%, var(--glow-a), transparent 55%),
-    radial-gradient(70% 55% at 10% 80%, var(--glow-b), transparent 50%),
-    linear-gradient(165deg, #101916 0%, var(--bg) 45%, #0a0f0d 100%);
+    radial-gradient(90% 70% at 85% 10%, var(--glow-a), transparent 55%),
+    radial-gradient(70% 55% at 12% 85%, var(--glow-b), transparent 50%),
+    linear-gradient(165deg, #14122a 0%, var(--bg) 48%, #05070f 100%);
 }
 
 .hero-grid {
@@ -265,7 +265,7 @@
   font-size: clamp(1.15rem, 2.4vw, 1.55rem);
   font-weight: 600;
   letter-spacing: -0.02em;
-  color: var(--accent-hot);
+  color: var(--accent-soft);
 }
 
 .lede {
@@ -299,12 +299,12 @@
 }
 
 .btn-primary {
-  background: var(--accent);
-  color: #14110a;
+  background: linear-gradient(135deg, var(--accent) 0%, #5b8cff 100%);
+  color: #f7f8ff;
 }
 
 .btn-primary:hover {
-  background: var(--accent-hot);
+  background: linear-gradient(135deg, var(--accent-hot) 0%, var(--accent-soft) 100%);
   transform: translateY(-2px);
 }
 

@@ -15,7 +15,7 @@ body {
 }
 
 body {
-  background: #0b1210;
+  background: #070912;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -25,6 +25,6 @@ body {
 }
 
 ::selection {
-  background: color-mix(in srgb, #c4a35a 55%, transparent);
-  color: #14110a;
+  background: color-mix(in srgb, #7c5cff 55%, transparent);
+  color: #f7f8ff;
 }
