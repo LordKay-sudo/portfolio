@@ -5,8 +5,6 @@ import { projectsListEnter } from './portfolio.animations';
 import {
   BRAND_NAME,
   CONTACT_EMAIL,
-  EDUCATION,
-  EXPERIENCE,
   FEATURED_WORK,
   GITHUB_PROFILE_URL,
   GITHUB_REPO_URL,
@@ -40,6 +38,4 @@ export class App {
   protected readonly skills = signal<readonly SkillChip[]>(SKILL_CHIPS);
   protected readonly featured = signal<readonly FeaturedWork[]>(FEATURED_WORK);
   protected readonly projects = signal<readonly SelectedProject[]>(SELECTED_PROJECTS);
-  protected readonly experience = signal(EXPERIENCE);
-  protected readonly education = signal(EDUCATION);
 }

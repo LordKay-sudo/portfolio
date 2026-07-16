@@ -4,7 +4,7 @@
     <div class="nav-links">
       <a href="#work">Work</a>
       <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
       <a class="nav-cta" [href]="githubProfile" target="_blank" rel="noopener noreferrer">GitHub</a>
     </div>
   </nav>
@@ -91,7 +91,7 @@
       </ul>
     </section>
 
-    <section class="section" aria-labelledby="skills-heading">
+    <section class="section" id="skills" aria-labelledby="skills-heading">
       <div class="section-head">
         <h2 id="skills-heading">Skills &amp; stack</h2>
         <p class="section-kicker">Tools I use to ship and support platforms</p>
@@ -134,45 +134,6 @@
           </li>
         }
       </ol>
-    </section>
-
-    <section class="section" id="experience" aria-labelledby="experience-heading">
-      <div class="section-head">
-        <h2 id="experience-heading">Experience</h2>
-        <p class="section-kicker">Roles and the work that stuck</p>
-      </div>
-      <div class="timeline">
-        @for (job of experience(); track job.title + job.period) {
-          <article class="timeline-item">
-            <header>
-              <h3>{{ job.title }}</h3>
-              <p class="meta">{{ job.period }} · {{ job.context }}</p>
-            </header>
-            <ul>
-              @for (b of job.bullets; track b) {
-                <li>{{ b }}</li>
-              }
-            </ul>
-          </article>
-        }
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="education-heading">
-      <div class="section-head">
-        <h2 id="education-heading">Education</h2>
-        <p class="section-kicker">Foundation under the stack</p>
-      </div>
-      <ul class="edu-list">
-        @for (row of education(); track row.line) {
-          <li>
-            <span class="line">{{ row.line }}</span>
-            @if (row.detail) {
-              <span class="detail">{{ row.detail }}</span>
-            }
-          </li>
-        }
-      </ul>
     </section>
   </main>
 
