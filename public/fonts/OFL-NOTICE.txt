@@ -1,0 +1,6 @@
+Mona Sans
+Copyright (c) 2022-2026, GitHub https://github.com/github/mona-sans
+Licensed under the SIL Open Font License, Version 1.1
+https://scripts.sil.org/OFL
+
+Variable Latin weight file sourced via Fontsource / jsDelivr for web use.
