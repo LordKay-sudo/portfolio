@@ -60,6 +60,13 @@ export interface FeaturedWork {
 
 export const FEATURED_WORK: readonly FeaturedWork[] = [
   {
+    title: 'OntoHarness',
+    description:
+      'Competency-question contracts for AI agents—closed-world vocab gate plus SHACL validation before graph commits, with Spring AI Advisor and GapForge HITL integration.',
+    href: 'https://github.com/LordKay-sudo/ontoharness',
+    stack: 'Python · SHACL · Spring AI',
+  },
+  {
     title: 'BioInsight Graph',
     description:
       'Disease–target knowledge graph with FastAPI, Neo4j, and a React explorer—ranked associations, provenance, and literature-aware retrieval demos.',
