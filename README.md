@@ -1,59 +1,50 @@
 # Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.9.
+Public portfolio site for **Lordwill Kandiro** — full-stack engineer (Spring Boot, Angular, enterprise platforms, OSS biomedical/agent tooling).
 
-## Development server
+**Live site:** [https://portfolio.lordkay.com](https://portfolio.lordkay.com)
 
-To start a local development server, run:
+**Source:** [github.com/LordKay-sudo/portfolio](https://github.com/LordKay-sudo/portfolio)
+
+Featured open-source work on the site includes [OntoHarness](https://github.com/LordKay-sudo/ontoharness), [GapForge](https://github.com/LordKay-sudo/gapforge), [BioInsight Graph](https://github.com/LordKay-sudo/bioinsight-graph), and [PeerLens](https://github.com/LordKay-sudo/peerlens).
+
+---
+
+## Deploy (GitHub Pages)
+
+Pushes to `main` run [`.github/workflows/deploy-github-pages.yml`](.github/workflows/deploy-github-pages.yml) and publish to GitHub Pages.
+
+- **Custom domain:** `portfolio.lordkay.com` (see [`public/CNAME`](public/CNAME))
+- **Build:** `npm ci && npm run build -- --configuration production`
+- **Artifact:** `dist/portfolio/browser`
+
+After changing `portfolio.data.ts`, push to `main` — the live site updates in ~1 minute.
+
+---
+
+## Development
 
 ```bash
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open [http://localhost:4200](http://localhost:4200).
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Production build
 
 ```bash
-ng generate component component-name
+npm run build -- --configuration production
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## Content
 
-## Building
+Copy and featured projects live in [`src/app/portfolio.data.ts`](src/app/portfolio.data.ts).
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## Additional resources
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- [Angular CLI documentation](https://angular.dev/tools/cli)
