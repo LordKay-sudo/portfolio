@@ -146,9 +146,9 @@ export const SELECTED_PROJECTS: readonly SelectedProject[] = [
     tags: ['Multi-tenant', 'SaaS'],
   },
   {
-    title: 'Card processing & monitoring',
+    title: 'Financial infrastructure monitoring',
     description:
-      'Production support, troubleshooting, and iterative improvements for card transaction processing and monitoring.',
-    tags: ['Payments', 'Support'],
+      'Production support and ongoing improvements for a monitoring platform used by banks and payment processors to maintain operational visibility.',
+    tags: ['Monitoring', 'Financial services'],
   },
 ];
