@@ -6,7 +6,7 @@ Public portfolio site for **Lordwill Kandiro** — full-stack engineer (Spring B
 
 **Source:** [github.com/LordKay-sudo/portfolio](https://github.com/LordKay-sudo/portfolio)
 
-Featured open-source work on the site includes [OntoHarness](https://github.com/LordKay-sudo/ontoharness), [GapForge](https://github.com/LordKay-sudo/gapforge), [BioInsight Graph](https://github.com/LordKay-sudo/bioinsight-graph), and [PeerLens](https://github.com/LordKay-sudo/peerlens).
+Featured open-source work on the site includes a [merged Angular compiler-cli bugfix](https://github.com/angular/angular/pull/69548), [OntoHarness](https://github.com/LordKay-sudo/ontoharness), [GapForge](https://github.com/LordKay-sudo/gapforge), [BioInsight Graph](https://github.com/LordKay-sudo/bioinsight-graph), and [PeerLens](https://github.com/LordKay-sudo/peerlens).
 
 ---
 

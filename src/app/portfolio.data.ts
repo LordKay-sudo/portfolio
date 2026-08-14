@@ -9,6 +9,8 @@ export const CONTACT_EMAIL = 'lkandiro@gmail.com';
 
 export const GITHUB_PROFILE_URL = 'https://github.com/LordKay-sudo';
 
+export const PORTFOLIO_SITE_URL = 'https://portfolio.lordkay.com';
+
 export const GITHUB_REPO_URL = 'https://github.com/LordKay-sudo/portfolio';
 
 export const HERO_HEADLINE = 'Full-stack engineer';
@@ -59,6 +61,13 @@ export interface FeaturedWork {
 }
 
 export const FEATURED_WORK: readonly FeaturedWork[] = [
+  {
+    title: 'Angular compiler-cli',
+    description:
+      'Merged bugfix in angular/angular: stop a TypeScript 5.9 crash during incremental rebuilds so diagnostics keep working after files change.',
+    href: 'https://github.com/angular/angular/pull/69548',
+    stack: 'TypeScript · compiler-cli · merged PR',
+  },
   {
     title: 'OntoHarness',
     description:
