@@ -21,14 +21,14 @@
       <h1>{{ headline }}</h1>
       <p class="lede">{{ subtitle }}</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#work">See featured work</a>
+        <a class="btn btn-primary" href="#work">Featured work</a>
         <a
           class="btn btn-ghost"
           [href]="githubProfile"
           target="_blank"
           rel="noopener noreferrer"
         >
-          GitHub profile
+          GitHub
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path
               d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 .99-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.31-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
@@ -46,15 +46,15 @@
     <div class="stack-visual" aria-hidden="true">
       <div class="stack-plane stack-plane--1">
         <span>UI</span>
-        <em>Angular Â· TypeScript</em>
+        <em>Angular · TypeScript</em>
       </div>
       <div class="stack-plane stack-plane--2">
         <span>API</span>
-        <em>Spring Boot Â· REST</em>
+        <em>Spring Boot · REST</em>
       </div>
       <div class="stack-plane stack-plane--3">
         <span>DATA</span>
-        <em>SQL Â· Flyway Â· Cloud</em>
+        <em>SQL · Flyway · Cloud</em>
       </div>
     </div>
   </header>
@@ -63,7 +63,6 @@
     <section class="section" aria-labelledby="about-heading">
       <div class="section-head">
         <h2 id="about-heading">About</h2>
-        <p class="section-kicker">How I show up in production systems</p>
       </div>
       <p class="summary">{{ summary }}</p>
     </section>
@@ -71,7 +70,6 @@
     <section class="section" id="work" aria-labelledby="work-heading">
       <div class="section-head">
         <h2 id="work-heading">Featured work</h2>
-        <p class="section-kicker">Public work you can open and inspect</p>
       </div>
       <ul class="featured-list" @projectsListEnter>
         @for (item of featured(); track item.title) {
@@ -83,7 +81,7 @@
               </div>
               <div class="featured-meta">
                 <span>{{ item.stack }}</span>
-                <span class="featured-arrow" aria-hidden="true">â†’</span>
+                <span class="featured-arrow" aria-hidden="true">?</span>
               </div>
             </a>
           </li>
@@ -93,8 +91,7 @@
 
     <section class="section" id="skills" aria-labelledby="skills-heading">
       <div class="section-head">
-        <h2 id="skills-heading">Skills &amp; stack</h2>
-        <p class="section-kicker">Tools I use to ship and support platforms</p>
+        <h2 id="skills-heading">Skills</h2>
       </div>
       <div class="skill-rail" role="list" @skillsListEnter>
         @for (item of skills(); track item.title) {
@@ -118,7 +115,6 @@
     <section class="section" id="projects" aria-labelledby="projects-heading">
       <div class="section-head">
         <h2 id="projects-heading">Selected projects</h2>
-        <p class="section-kicker">Enterprise delivery highlights from production platforms</p>
       </div>
       <ol class="project-list">
         @for (p of projects(); track p.title; let i = $index) {
@@ -127,7 +123,7 @@
             <div class="project-body">
               <div class="project-title-row">
                 <h3>{{ p.title }}</h3>
-                <span class="project-tags">{{ p.tags.join(' Â· ') }}</span>
+                <span class="project-tags">{{ p.tags.join(' · ') }}</span>
               </div>
               <p>{{ p.description }}</p>
             </div>
@@ -140,7 +136,6 @@
   <footer class="site-footer">
     <p>
       <span class="footer-brand">{{ brand }}</span>
-      â€” building systems that hold up in production.
     </p>
     <p class="footer-links">
       <a [href]="'mailto:' + email">{{ email }}</a>
