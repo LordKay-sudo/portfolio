@@ -47,7 +47,7 @@ export const SKILL_CHIPS: readonly SkillChip[] = [
   { title: 'GCP', link: 'https://cloud.google.com' },
   { title: 'Maven', link: 'https://maven.apache.org' },
   { title: 'Git', link: 'https://git-scm.com' },
-  { title: 'Jenkins', link: 'https://www.jenkins.io' },
+  { title: 'Jenkins', link: 'https://jenkins.io' },
   { title: 'Linux / Windows ops', link: null },
   { title: 'Python', link: 'https://www.python.org' },
 ];
@@ -67,35 +67,35 @@ export const FEATURED_WORK: readonly FeaturedWork[] = [
     description:
       'Merged bugfix in angular/angular: stop a TypeScript 5.9 crash during incremental rebuilds so diagnostics keep working after files change.',
     href: 'https://github.com/angular/angular/pull/69548',
-    stack: 'TypeScript Â· compiler-cli Â· merged PR',
+    stack: 'TypeScript / compiler-cli / merged PR',
   },
   {
     title: 'OntoHarness',
     description:
       'Competency-question contracts for AI agents: closed-world vocab gate and SHACL validation before graph commits, with Spring AI Advisor and GapForge HITL integration.',
     href: 'https://github.com/LordKay-sudo/ontoharness',
-    stack: 'Python Â· SHACL Â· Spring AI',
+    stack: 'Python / SHACL / Spring AI',
   },
   {
     title: 'BioInsight Graph',
     description:
-      'Diseaseâ€“target knowledge graph with FastAPI, Neo4j, and a React explorer: ranked associations, provenance, and literature-aware retrieval demos.',
+      'Disease-target knowledge graph with FastAPI, Neo4j, and a React explorer: ranked associations, provenance, and literature-aware retrieval demos.',
     href: 'https://github.com/LordKay-sudo/bioinsight-graph',
-    stack: 'FastAPI Â· Neo4j Â· React',
+    stack: 'FastAPI / Neo4j / React',
   },
   {
     title: 'GapForge',
     description:
       'Translational gap hunter that proposes literature- and graph-backed hypotheses for stalled programs. Agents propose; humans decide.',
     href: 'https://github.com/LordKay-sudo/gapforge',
-    stack: 'Python Â· Agents Â· Graph',
+    stack: 'Python / Agents / Graph',
   },
   {
     title: 'PeerLens',
     description:
       'Open infrastructure for research quality signals: explainable automated checks, Crossref/arXiv ingest, and cited RAG Q&A on papers.',
     href: 'https://github.com/LordKay-sudo/peerlens',
-    stack: 'FastAPI Â· RAG Â· Web UI',
+    stack: 'FastAPI / RAG / Web UI',
   },
 ];
 

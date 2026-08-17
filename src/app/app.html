@@ -70,6 +70,7 @@
     <section class="section" id="work" aria-labelledby="work-heading">
       <div class="section-head">
         <h2 id="work-heading">Featured work</h2>
+        <p class="section-kicker">Production delivery at Arvuti / enterprise</p>
       </div>
       <ol class="project-list">
         @for (p of work(); track p.title; let i = $index) {
@@ -85,6 +86,29 @@
           </li>
         }
       </ol>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-heading">
+      <div class="section-head">
+        <h2 id="projects-heading">Projects</h2>
+        <p class="section-kicker">Open source on GitHub</p>
+      </div>
+      <ul class="featured-list" @projectsListEnter>
+        @for (item of projects(); track item.title) {
+          <li>
+            <a class="featured-row" [href]="item.href" target="_blank" rel="noopener noreferrer">
+              <div class="featured-main">
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.description }}</p>
+              </div>
+              <div class="featured-meta">
+                <span>{{ item.stack }}</span>
+                <span class="featured-arrow" aria-hidden="true">-></span>
+              </div>
+            </a>
+          </li>
+        }
+      </ul>
     </section>
 
     <section class="section" id="skills" aria-labelledby="skills-heading">
@@ -108,28 +132,6 @@
           }
         }
       </div>
-    </section>
-
-    <section class="section" id="projects" aria-labelledby="projects-heading">
-      <div class="section-head">
-        <h2 id="projects-heading">Projects</h2>
-      </div>
-      <ul class="featured-list" @projectsListEnter>
-        @for (item of projects(); track item.title) {
-          <li>
-            <a class="featured-row" [href]="item.href" target="_blank" rel="noopener noreferrer">
-              <div class="featured-main">
-                <h3>{{ item.title }}</h3>
-                <p>{{ item.description }}</p>
-              </div>
-              <div class="featured-meta">
-                <span>{{ item.stack }}</span>
-                <span class="featured-arrow" aria-hidden="true">-></span>
-              </div>
-            </a>
-          </li>
-        }
-      </ul>
     </section>
   </main>
 
