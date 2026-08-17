@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Portfolio copy for the public site.
  * Name is the brand signal; email is the only contact detail shown.
  */
@@ -67,35 +67,35 @@ export const FEATURED_WORK: readonly FeaturedWork[] = [
     description:
       'Merged bugfix in angular/angular: stop a TypeScript 5.9 crash during incremental rebuilds so diagnostics keep working after files change.',
     href: 'https://github.com/angular/angular/pull/69548',
-    stack: 'TypeScript · compiler-cli · merged PR',
+    stack: 'TypeScript Â· compiler-cli Â· merged PR',
   },
   {
     title: 'OntoHarness',
     description:
       'Competency-question contracts for AI agents: closed-world vocab gate and SHACL validation before graph commits, with Spring AI Advisor and GapForge HITL integration.',
     href: 'https://github.com/LordKay-sudo/ontoharness',
-    stack: 'Python · SHACL · Spring AI',
+    stack: 'Python Â· SHACL Â· Spring AI',
   },
   {
     title: 'BioInsight Graph',
     description:
-      'Disease–target knowledge graph with FastAPI, Neo4j, and a React explorer: ranked associations, provenance, and literature-aware retrieval demos.',
+      'Diseaseâ€“target knowledge graph with FastAPI, Neo4j, and a React explorer: ranked associations, provenance, and literature-aware retrieval demos.',
     href: 'https://github.com/LordKay-sudo/bioinsight-graph',
-    stack: 'FastAPI · Neo4j · React',
+    stack: 'FastAPI Â· Neo4j Â· React',
   },
   {
     title: 'GapForge',
     description:
       'Translational gap hunter that proposes literature- and graph-backed hypotheses for stalled programs. Agents propose; humans decide.',
     href: 'https://github.com/LordKay-sudo/gapforge',
-    stack: 'Python · Agents · Graph',
+    stack: 'Python Â· Agents Â· Graph',
   },
   {
     title: 'PeerLens',
     description:
       'Open infrastructure for research quality signals: explainable automated checks, Crossref/arXiv ingest, and cited RAG Q&A on papers.',
     href: 'https://github.com/LordKay-sudo/peerlens',
-    stack: 'FastAPI · RAG · Web UI',
+    stack: 'FastAPI Â· RAG Â· Web UI',
   },
 ];
 
