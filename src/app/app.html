@@ -71,22 +71,20 @@
       <div class="section-head">
         <h2 id="work-heading">Featured work</h2>
       </div>
-      <ul class="featured-list" @projectsListEnter>
-        @for (item of featured(); track item.title) {
-          <li>
-            <a class="featured-row" [href]="item.href" target="_blank" rel="noopener noreferrer">
-              <div class="featured-main">
-                <h3>{{ item.title }}</h3>
-                <p>{{ item.description }}</p>
+      <ol class="project-list">
+        @for (p of work(); track p.title; let i = $index) {
+          <li class="project-row">
+            <span class="project-index" aria-hidden="true">{{ i + 1 < 10 ? '0' + (i + 1) : i + 1 }}</span>
+            <div class="project-body">
+              <div class="project-title-row">
+                <h3>{{ p.title }}</h3>
+                <span class="project-tags">{{ p.tags.join(' · ') }}</span>
               </div>
-              <div class="featured-meta">
-                <span>{{ item.stack }}</span>
-                <span class="featured-arrow" aria-hidden="true">?</span>
-              </div>
-            </a>
+              <p>{{ p.description }}</p>
+            </div>
           </li>
         }
-      </ul>
+      </ol>
     </section>
 
     <section class="section" id="skills" aria-labelledby="skills-heading">
@@ -114,22 +112,24 @@
 
     <section class="section" id="projects" aria-labelledby="projects-heading">
       <div class="section-head">
-        <h2 id="projects-heading">Selected projects</h2>
+        <h2 id="projects-heading">Projects</h2>
       </div>
-      <ol class="project-list">
-        @for (p of projects(); track p.title; let i = $index) {
-          <li class="project-row">
-            <span class="project-index" aria-hidden="true">{{ i + 1 < 10 ? '0' + (i + 1) : i + 1 }}</span>
-            <div class="project-body">
-              <div class="project-title-row">
-                <h3>{{ p.title }}</h3>
-                <span class="project-tags">{{ p.tags.join(' · ') }}</span>
+      <ul class="featured-list" @projectsListEnter>
+        @for (item of projects(); track item.title) {
+          <li>
+            <a class="featured-row" [href]="item.href" target="_blank" rel="noopener noreferrer">
+              <div class="featured-main">
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.description }}</p>
               </div>
-              <p>{{ p.description }}</p>
-            </div>
+              <div class="featured-meta">
+                <span>{{ item.stack }}</span>
+                <span class="featured-arrow" aria-hidden="true">?</span>
+              </div>
+            </a>
           </li>
         }
-      </ol>
+      </ul>
     </section>
   </main>
 

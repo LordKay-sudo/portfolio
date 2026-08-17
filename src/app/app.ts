@@ -36,6 +36,8 @@ export class App {
   protected readonly githubProfile = GITHUB_PROFILE_URL;
 
   protected readonly skills = signal<readonly SkillChip[]>(SKILL_CHIPS);
-  protected readonly featured = signal<readonly FeaturedWork[]>(FEATURED_WORK);
-  protected readonly projects = signal<readonly SelectedProject[]>(SELECTED_PROJECTS);
+  /** Production delivery highlights (Arvuti / enterprise). */
+  protected readonly work = signal<readonly SelectedProject[]>(SELECTED_PROJECTS);
+  /** Public OSS and open contributions. */
+  protected readonly projects = signal<readonly FeaturedWork[]>(FEATURED_WORK);
 }

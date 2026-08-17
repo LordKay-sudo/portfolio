@@ -60,6 +60,7 @@ export interface FeaturedWork {
   readonly stack: string;
 }
 
+/** Open-source and public GitHub work. */
 export const FEATURED_WORK: readonly FeaturedWork[] = [
   {
     title: 'Angular compiler-cli',
@@ -98,7 +99,7 @@ export const FEATURED_WORK: readonly FeaturedWork[] = [
   },
 ];
 
-/** Selected projects — aligned with generic resume (PDF) “Selected Projects”. */
+/** Production / enterprise delivery highlights. */
 export interface SelectedProject {
   readonly title: string;
   readonly description: string;
