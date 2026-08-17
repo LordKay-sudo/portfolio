@@ -46,15 +46,15 @@
     <div class="stack-visual" aria-hidden="true">
       <div class="stack-plane stack-plane--1">
         <span>UI</span>
-        <em>Angular · TypeScript</em>
+        <em>Angular / TypeScript</em>
       </div>
       <div class="stack-plane stack-plane--2">
         <span>API</span>
-        <em>Spring Boot · REST</em>
+        <em>Spring Boot / REST</em>
       </div>
       <div class="stack-plane stack-plane--3">
         <span>DATA</span>
-        <em>SQL · Flyway · Cloud</em>
+        <em>SQL / Flyway / Cloud</em>
       </div>
     </div>
   </header>
@@ -78,7 +78,7 @@
             <div class="project-body">
               <div class="project-title-row">
                 <h3>{{ p.title }}</h3>
-                <span class="project-tags">{{ p.tags.join(' · ') }}</span>
+                <span class="project-tags">{{ p.tags.join(' / ') }}</span>
               </div>
               <p>{{ p.description }}</p>
             </div>
@@ -124,7 +124,7 @@
               </div>
               <div class="featured-meta">
                 <span>{{ item.stack }}</span>
-                <span class="featured-arrow" aria-hidden="true">?</span>
+                <span class="featured-arrow" aria-hidden="true">-></span>
               </div>
             </a>
           </li>
