@@ -11,9 +11,103 @@
 
   <header class="hero" id="top">
     <div class="hero-atmosphere" aria-hidden="true">
-      <div class="hero-grid"></div>
-      <div class="hero-orb hero-orb--a"></div>
-      <div class="hero-orb hero-orb--b"></div>
+      <svg class="hero-constellation" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <!-- Sparse field stars (quiet depth) -->
+        <g fill="currentColor" fill-opacity="0.28">
+          <circle cx="48" cy="72" r="0.9" />
+          <circle cx="112" cy="38" r="0.7" />
+          <circle cx="168" cy="210" r="0.8" />
+          <circle cx="290" cy="48" r="0.7" />
+          <circle cx="390" cy="160" r="0.9" />
+          <circle cx="450" cy="70" r="0.7" />
+          <circle cx="520" cy="190" r="0.8" />
+          <circle cx="590" cy="40" r="0.7" />
+          <circle cx="670" cy="220" r="0.8" />
+          <circle cx="740" cy="55" r="0.9" />
+          <circle cx="820" cy="140" r="0.7" />
+          <circle cx="890" cy="35" r="0.8" />
+          <circle cx="970" cy="95" r="0.7" />
+          <circle cx="1080" cy="48" r="0.9" />
+          <circle cx="1145" cy="180" r="0.7" />
+          <circle cx="70" cy="320" r="0.8" />
+          <circle cx="150" cy="380" r="0.7" />
+          <circle cx="310" cy="300" r="0.8" />
+          <circle cx="400" cy="360" r="0.7" />
+          <circle cx="480" cy="290" r="0.9" />
+          <circle cx="560" cy="340" r="0.7" />
+          <circle cx="650" cy="310" r="0.8" />
+          <circle cx="780" cy="280" r="0.7" />
+          <circle cx="860" cy="350" r="0.8" />
+          <circle cx="980" cy="300" r="0.7" />
+          <circle cx="1100" cy="360" r="0.9" />
+          <circle cx="1160" cy="280" r="0.7" />
+          <circle cx="95" cy="520" r="0.8" />
+          <circle cx="230" cy="560" r="0.7" />
+          <circle cx="340" cy="500" r="0.8" />
+          <circle cx="470" cy="580" r="0.7" />
+          <circle cx="600" cy="520" r="0.9" />
+          <circle cx="720" cy="570" r="0.7" />
+          <circle cx="850" cy="510" r="0.8" />
+          <circle cx="990" cy="560" r="0.7" />
+          <circle cx="1120" cy="500" r="0.8" />
+          <circle cx="180" cy="680" r="0.7" />
+          <circle cx="360" cy="720" r="0.8" />
+          <circle cx="540" cy="690" r="0.7" />
+          <circle cx="760" cy="730" r="0.8" />
+          <circle cx="940" cy="680" r="0.7" />
+          <circle cx="1080" cy="740" r="0.9" />
+        </g>
+
+        <!-- A few asterisms only — denser than before, not busy -->
+        <g fill="currentColor" stroke="currentColor" stroke-width="0.9" stroke-opacity="0.22" fill-opacity="0.7">
+          <!-- NW kite -->
+          <circle cx="160" cy="110" r="1.5" />
+          <circle cx="230" cy="85" r="1.2" />
+          <circle cx="290" cy="130" r="1.3" />
+          <circle cx="195" cy="175" r="1.1" />
+          <path d="M160 110 L230 85 L290 130 L195 175 Z" fill="none" />
+
+          <!-- NE diamond -->
+          <circle cx="940" cy="105" r="1.4" />
+          <circle cx="1005" cy="75" r="1.2" />
+          <circle cx="1070" cy="125" r="1.3" />
+          <circle cx="990" cy="165" r="1.1" />
+          <path d="M940 105 L1005 75 L1070 125 L990 165 Z" fill="none" />
+
+          <!-- Upper arc -->
+          <circle cx="560" cy="70" r="1.3" />
+          <circle cx="620" cy="105" r="1.1" />
+          <circle cx="690" cy="75" r="1.4" />
+          <circle cx="740" cy="120" r="1.1" />
+          <path d="M560 70 L620 105 L690 75 L740 120" fill="none" />
+
+          <!-- Left chain -->
+          <circle cx="95" cy="280" r="1.2" />
+          <circle cx="145" cy="330" r="1.3" />
+          <circle cx="110" cy="390" r="1.1" />
+          <circle cx="175" cy="430" r="1.2" />
+          <path d="M95 280 L145 330 L110 390 L175 430" fill="none" />
+
+          <!-- Right chain -->
+          <circle cx="1020" cy="250" r="1.2" />
+          <circle cx="1085" cy="300" r="1.3" />
+          <circle cx="1035" cy="355" r="1.1" />
+          <circle cx="1110" cy="400" r="1.2" />
+          <path d="M1020 250 L1085 300 L1035 355 L1110 400" fill="none" />
+
+          <!-- Mid-right triangle -->
+          <circle cx="820" cy="420" r="1.3" />
+          <circle cx="880" cy="470" r="1.1" />
+          <circle cx="915" cy="410" r="1.4" />
+          <path d="M820 420 L880 470 L915 410 Z" fill="none" />
+
+          <!-- Lower-left chevron -->
+          <circle cx="220" cy="560" r="1.2" />
+          <circle cx="280" cy="610" r="1.3" />
+          <circle cx="340" cy="555" r="1.1" />
+          <path d="M220 560 L280 610 L340 555" fill="none" />
+        </g>
+      </svg>
     </div>
 
     <div class="hero-copy">
@@ -22,6 +116,7 @@
       <p class="lede">{{ subtitle }}</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#work">Featured work</a>
+        <a class="btn btn-secondary" href="#projects">Projects</a>
         <a
           class="btn btn-ghost"
           [href]="githubProfile"
