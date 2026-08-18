@@ -5,7 +5,7 @@
   --muted: #9aa3c0;
   --line: color-mix(in srgb, #eef1ff 14%, transparent);
   --accent: #7c5cff;
-  --accent-soft: #6eb6ff;
+  --accent-soft: #9b87ff;
   --accent-deep: #6346e0;
 
   --font-display: 'Mona Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -232,7 +232,7 @@
   font-size: clamp(1.1rem, 2.2vw, 1.4rem);
   font-weight: 600;
   letter-spacing: -0.015em;
-  color: var(--accent-soft);
+  color: var(--accent);
 }
 
 .lede {
@@ -279,14 +279,14 @@
 
 .btn-secondary {
   color: var(--ink);
-  border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
-  background: color-mix(in srgb, var(--bg-elevated) 78%, transparent);
+  border-color: color-mix(in srgb, var(--accent) 50%, var(--line));
+  background: transparent;
 }
 
 .btn-secondary:hover {
-  color: #f7f8ff;
-  border-color: color-mix(in srgb, var(--accent-soft) 55%, var(--accent));
-  background: color-mix(in srgb, var(--accent) 18%, var(--bg-elevated));
+  color: var(--ink);
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
   transform: translateY(-2px);
 }
 
