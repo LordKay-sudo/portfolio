@@ -1,0 +1,22 @@
+<section class="section" id="projects" aria-labelledby="projects-heading">
+  <div class="section-head">
+    <h2 id="projects-heading">Projects</h2>
+    <p class="section-kicker">Open source on GitHub</p>
+  </div>
+  <ul class="featured-list" @projectsListEnter>
+    @for (item of items(); track item.title) {
+      <li>
+        <a class="featured-row" [href]="item.href" target="_blank" rel="noopener noreferrer">
+          <div class="featured-main">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+          </div>
+          <div class="featured-meta">
+            <span>{{ item.stack }}</span>
+            <span class="featured-arrow" aria-hidden="true">-></span>
+          </div>
+        </a>
+      </li>
+    }
+  </ul>
+</section>

@@ -21,35 +21,42 @@ export const HERO_SUBTITLE =
 export const SUMMARY =
   'I have spent more than five years building and supporting enterprise web platforms. Most of that work sits on Spring Boot, Spring Data JPA, Hibernate, Angular, and relational databases: order flows, approvals, logistics, multi-tenant modules, and the APIs that keep them connected. I care about release safety, clear access control, and code that other people can still run months later.';
 
+export type SkillCategory = 'Backend' | 'Frontend' | 'Data' | 'Cloud' | 'Tools';
+
 export interface SkillChip {
   readonly title: string;
   /** Official docs or home; omit for plain chips. */
   readonly link: string | null;
+  readonly category: SkillCategory;
 }
 
+export const SKILL_CATEGORIES = ['All', 'Backend', 'Frontend', 'Data', 'Cloud', 'Tools'] as const;
+
+export type SkillFilter = (typeof SKILL_CATEGORIES)[number];
+
 export const SKILL_CHIPS: readonly SkillChip[] = [
-  { title: 'Java', link: 'https://dev.java' },
-  { title: 'Spring Boot', link: 'https://spring.io/projects/spring-boot' },
-  { title: 'Spring Security', link: 'https://spring.io/projects/spring-security' },
-  { title: 'Spring Data / JPA', link: 'https://spring.io/projects/spring-data-jpa' },
-  { title: 'REST APIs', link: null },
-  { title: 'Angular', link: 'https://angular.dev' },
-  { title: 'TypeScript', link: 'https://www.typescriptlang.org' },
-  { title: 'HTML / CSS', link: null },
-  { title: 'MySQL', link: 'https://www.mysql.com' },
-  { title: 'PostgreSQL', link: 'https://www.postgresql.org' },
-  { title: 'MongoDB', link: 'https://www.mongodb.com' },
-  { title: 'Flyway', link: 'https://flywaydb.org' },
-  { title: 'Amazon Bedrock', link: 'https://aws.amazon.com/bedrock/' },
-  { title: 'Knowledge Bases & RAG', link: 'https://aws.amazon.com/bedrock/knowledge-bases/' },
-  { title: 'Spring AI', link: 'https://spring.io/projects/spring-ai' },
-  { title: 'AWS', link: 'https://aws.amazon.com' },
-  { title: 'GCP', link: 'https://cloud.google.com' },
-  { title: 'Maven', link: 'https://maven.apache.org' },
-  { title: 'Git', link: 'https://git-scm.com' },
-  { title: 'Jenkins', link: 'https://jenkins.io' },
-  { title: 'Linux / Windows ops', link: null },
-  { title: 'Python', link: 'https://www.python.org' },
+  { title: 'Java', link: 'https://dev.java', category: 'Backend' },
+  { title: 'Spring Boot', link: 'https://spring.io/projects/spring-boot', category: 'Backend' },
+  { title: 'Spring Security', link: 'https://spring.io/projects/spring-security', category: 'Backend' },
+  { title: 'Spring Data / JPA', link: 'https://spring.io/projects/spring-data-jpa', category: 'Backend' },
+  { title: 'REST APIs', link: null, category: 'Backend' },
+  { title: 'Angular', link: 'https://angular.dev', category: 'Frontend' },
+  { title: 'TypeScript', link: 'https://www.typescriptlang.org', category: 'Frontend' },
+  { title: 'HTML / CSS', link: null, category: 'Frontend' },
+  { title: 'MySQL', link: 'https://www.mysql.com', category: 'Data' },
+  { title: 'PostgreSQL', link: 'https://www.postgresql.org', category: 'Data' },
+  { title: 'MongoDB', link: 'https://www.mongodb.com', category: 'Data' },
+  { title: 'Flyway', link: 'https://flywaydb.org', category: 'Data' },
+  { title: 'Amazon Bedrock', link: 'https://aws.amazon.com/bedrock/', category: 'Cloud' },
+  { title: 'Knowledge Bases & RAG', link: 'https://aws.amazon.com/bedrock/knowledge-bases/', category: 'Cloud' },
+  { title: 'Spring AI', link: 'https://spring.io/projects/spring-ai', category: 'Cloud' },
+  { title: 'AWS', link: 'https://aws.amazon.com', category: 'Cloud' },
+  { title: 'GCP', link: 'https://cloud.google.com', category: 'Cloud' },
+  { title: 'Maven', link: 'https://maven.apache.org', category: 'Tools' },
+  { title: 'Git', link: 'https://git-scm.com', category: 'Tools' },
+  { title: 'Jenkins', link: 'https://jenkins.io', category: 'Tools' },
+  { title: 'Linux / Windows ops', link: null, category: 'Tools' },
+  { title: 'Python', link: 'https://www.python.org', category: 'Backend' },
 ];
 
 /** Public / open-source pieces that hiring managers can click through. */
@@ -162,3 +169,5 @@ export const SELECTED_PROJECTS: readonly SelectedProject[] = [
     tags: ['Monitoring', 'Financial services'],
   },
 ];
+
+export const WORK_PREVIEW_COUNT = 5;

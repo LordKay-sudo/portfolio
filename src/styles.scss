@@ -1,3 +1,5 @@
+@use '@angular/material' as mat;
+
 @font-face {
   font-family: 'Mona Sans';
   src: url('/fonts/mona-sans-latin-wght.woff2') format('woff2-variations');
@@ -14,6 +16,26 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
+  @include mat.theme(
+    (
+      color: (
+        theme-type: dark,
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: (
+        plain-family: 'Mona Sans',
+        brand-family: 'Mona Sans',
+      ),
+      density: 0,
+    )
+  );
+
+  --mat-sys-primary: #0075ff;
+  --mat-sys-on-primary: #ffffff;
+  --mat-sys-primary-container: #003a80;
+  --mat-sys-on-primary-container: #d6e8ff;
 }
 
 html,
@@ -34,6 +56,6 @@ body {
 }
 
 ::selection {
-  background: color-mix(in srgb, #7c5cff 45%, transparent);
+  background: color-mix(in srgb, #0075ff 45%, transparent);
   color: #f7f8ff;
 }

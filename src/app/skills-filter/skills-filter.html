@@ -1,0 +1,32 @@
+<section class="section" id="skills" aria-labelledby="skills-heading">
+  <div class="section-head">
+    <h2 id="skills-heading">Skills</h2>
+    <p class="section-kicker">Filter by area</p>
+  </div>
+
+  <div class="skill-filters" role="group" aria-label="Skill categories">
+    @for (category of categories; track category) {
+      <button
+        mat-stroked-button
+        type="button"
+        [color]="active() === category ? 'primary' : undefined"
+        [class.is-active]="active() === category"
+        (click)="select(category)"
+      >
+        {{ category }}
+      </button>
+    }
+  </div>
+
+  <mat-chip-set class="skill-rail" role="list" @skillsListEnter>
+    @for (item of filtered(); track item.title) {
+      @if (item.link) {
+        <a class="skill-chip-link" role="listitem" [href]="item.link" target="_blank" rel="noopener noreferrer">
+          <mat-chip>{{ item.title }}</mat-chip>
+        </a>
+      } @else {
+        <mat-chip role="listitem">{{ item.title }}</mat-chip>
+      }
+    }
+  </mat-chip-set>
+</section>

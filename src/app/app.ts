@@ -1,7 +1,8 @@
 import { Component, signal } from '@angular/core';
+import { MatAnchor } from '@angular/material/button';
 import { RouterOutlet } from '@angular/router';
 
-import { projectsListEnter } from './portfolio.animations';
+import { HeroComponent } from './hero/hero';
 import {
   BRAND_NAME,
   CONTACT_EMAIL,
@@ -17,14 +18,22 @@ import {
   type SelectedProject,
   type SkillChip,
 } from './portfolio.data';
-import { skillsListEnter } from './skills.animations';
+import { ProjectsListComponent } from './projects-list/projects-list';
+import { SkillsFilterComponent } from './skills-filter/skills-filter';
+import { WorkListComponent } from './work-list/work-list';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [
+    RouterOutlet,
+    MatAnchor,
+    HeroComponent,
+    WorkListComponent,
+    ProjectsListComponent,
+    SkillsFilterComponent,
+  ],
   templateUrl: './app.html',
   styleUrl: './app.scss',
-  animations: [skillsListEnter, projectsListEnter],
 })
 export class App {
   protected readonly brand = BRAND_NAME;
@@ -36,8 +45,6 @@ export class App {
   protected readonly githubProfile = GITHUB_PROFILE_URL;
 
   protected readonly skills = signal<readonly SkillChip[]>(SKILL_CHIPS);
-  /** Production delivery highlights (Arvuti / enterprise). */
   protected readonly work = signal<readonly SelectedProject[]>(SELECTED_PROJECTS);
-  /** Public OSS and open contributions. */
   protected readonly projects = signal<readonly FeaturedWork[]>(FEATURED_WORK);
 }
