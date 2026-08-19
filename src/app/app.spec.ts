@@ -21,6 +21,6 @@ describe('App', () => {
     await fixture.whenStable();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.brand')?.textContent).toContain('Lordwill Kandiro');
-    expect(compiled.querySelector('h1')?.textContent).toContain('Full-stack engineer');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Java, Spring Boot & Angular');
   });
 });

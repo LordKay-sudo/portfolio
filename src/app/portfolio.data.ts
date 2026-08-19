@@ -13,13 +13,13 @@ export const PORTFOLIO_SITE_URL = 'https://portfolio.lordkay.com';
 
 export const GITHUB_REPO_URL = 'https://github.com/LordKay-sudo/portfolio';
 
-export const HERO_HEADLINE = 'Full-stack engineer';
+export const HERO_HEADLINE = 'Java, Spring Boot & Angular for production systems';
 
 export const HERO_SUBTITLE =
-  'Spring Boot, Angular, and secure APIs for ERP workflows, integrations, and document systems that stay up in production.';
+  'I ship enterprise platforms (ERP workflows, secure APIs, integrations) and contribute upstream to Angular, Spring Boot and Embabel.';
 
 export const SUMMARY =
-  'I have spent more than five years building and supporting enterprise web platforms. Most of that work sits on Spring Boot, Spring Data JPA, Hibernate, Angular, and relational databases: order flows, approvals, logistics, multi-tenant modules, and the APIs that keep them connected. I care about release safety, clear access control, and code that other people can still run months later.';
+  'More than five years building and supporting enterprise web platforms on Spring Boot, Spring Data JPA, Hibernate, Angular and relational databases. Day-to-day work covers order flows, approvals, logistics, multi-tenant modules, document-linked transactions and the APIs that keep them connected. Outside that delivery, I contribute merged fixes and features to major open-source projects. I care about release safety, clear access control and code other people can still run months later.';
 
 export type SkillCategory = 'Backend' | 'Frontend' | 'Data' | 'Cloud' | 'Tools';
 
@@ -67,26 +67,54 @@ export interface FeaturedWork {
   readonly stack: string;
 }
 
-/** Open-source and public GitHub work. */
+/** Open-source: upstream merged PRs first, then personal projects. */
 export const FEATURED_WORK: readonly FeaturedWork[] = [
   {
     title: 'Angular compiler-cli',
     description:
-      'Merged bugfix in angular/angular: stop a TypeScript 5.9 crash during incremental rebuilds so diagnostics keep working after files change.',
+      'Merged bug fix in angular/angular: stop a TypeScript 5.9 crash during incremental rebuilds so diagnostics keep working after files change.',
     href: 'https://github.com/angular/angular/pull/69548',
     stack: 'TypeScript / compiler-cli / merged PR',
   },
   {
+    title: 'Spring Boot Micrometer lifecycle',
+    description:
+      'Merged fix in spring-projects/spring-boot: stop Micrometer registries from pinning application contexts on shutdown (memory leak under heavy test and runtime load).',
+    href: 'https://github.com/spring-projects/spring-boot/pull/50886',
+    stack: 'Java / Micrometer / merged PR',
+  },
+  {
+    title: 'Spring Boot metrics test defaults',
+    description:
+      'Merged follow-up in spring-projects/spring-boot: disable the Micrometer global registry in tests by default so cached contexts stay isolated.',
+    href: 'https://github.com/spring-projects/spring-boot/pull/51142',
+    stack: 'Java / Spring Boot Test / merged PR',
+  },
+  {
+    title: 'Embabel MCP Actuator health',
+    description:
+      'Merged feature in embabel/embabel-agent: expose MCP server readiness through Spring Boot Actuator with configurable tool thresholds.',
+    href: 'https://github.com/embabel/embabel-agent/pull/1773',
+    stack: 'Kotlin / Actuator / merged PR',
+  },
+  {
+    title: 'Embabel Dice context-scoped history',
+    description:
+      'Merged fix in embabel/dice: scope chunk deduplication and analysis bookmarks by context so multi-session runs do not leak state.',
+    href: 'https://github.com/embabel/dice/pull/33',
+    stack: 'Kotlin / Agents / merged PR',
+  },
+  {
     title: 'OntoHarness',
     description:
-      'Competency-question contracts for AI agents: closed-world vocab gate and SHACL validation before graph commits, with Spring AI Advisor and GapForge HITL integration.',
+      'Competency-question contracts for agent workflows: closed-world vocab gate and SHACL validation before graph commits, with Spring AI Advisor and GapForge human-in-the-loop integration.',
     href: 'https://github.com/LordKay-sudo/ontoharness',
     stack: 'Python / SHACL / Spring AI',
   },
   {
     title: 'BioInsight Graph',
     description:
-      'Disease-target knowledge graph with FastAPI, Neo4j, and a React explorer: ranked associations, provenance, and literature-aware retrieval demos.',
+      'Disease-target knowledge graph with FastAPI, Neo4j and a React explorer: ranked associations, provenance and literature-aware retrieval demos.',
     href: 'https://github.com/LordKay-sudo/bioinsight-graph',
     stack: 'FastAPI / Neo4j / React',
   },
@@ -100,13 +128,34 @@ export const FEATURED_WORK: readonly FeaturedWork[] = [
   {
     title: 'PeerLens',
     description:
-      'Open infrastructure for research quality signals: explainable automated checks, Crossref/arXiv ingest, and cited RAG Q&A on papers.',
+      'Open infrastructure for research quality signals: explainable automated checks, Crossref/arXiv ingest and cited retrieval Q&A on papers.',
     href: 'https://github.com/LordKay-sudo/peerlens',
     stack: 'FastAPI / RAG / Web UI',
   },
+  {
+    title: 'SSE operations dashboards',
+    description:
+      'Server-sent events pattern for live operations dashboards: push updates without polling noise.',
+    href: 'https://github.com/LordKay-sudo/server-sent-events-dashboards',
+    stack: 'Spring Boot / SSE',
+  },
+  {
+    title: 'AI support copilot API',
+    description:
+      'Support-copilot style API sketch: retrieval-backed answers with clear request/response boundaries for ops tooling.',
+    href: 'https://github.com/LordKay-sudo/ai-support-copilot-api',
+    stack: 'Spring Boot / APIs',
+  },
+  {
+    title: 'gRPC billing platform sketch',
+    description:
+      'Spring Boot gRPC billing platform sketch for service-to-service billing flows and contract-first APIs.',
+    href: 'https://github.com/LordKay-sudo/spring-boot-grpc-billing-platform',
+    stack: 'Spring Boot / gRPC',
+  },
 ];
 
-/** Production / enterprise delivery highlights. */
+/** Enterprise production delivery highlights. */
 export interface SelectedProject {
   readonly title: string;
   readonly description: string;
@@ -117,49 +166,49 @@ export const SELECTED_PROJECTS: readonly SelectedProject[] = [
   {
     title: 'Order-to-cash & procure-to-pay',
     description:
-      'ERP flows for sales and purchase orders with approvals, status traceability, and operational controls in live environments.',
+      'Built and maintained ERP sales and purchase order flows with multi-stage approvals, status traceability and operational controls used daily in production.',
     tags: ['ERP', 'Workflows'],
   },
   {
     title: 'Document-integrated transactions',
     description:
-      'Order and invoice upload paths tied to approval stages, compliance records, and audit-ready history.',
+      'Tied order and invoice upload paths to approval stages, compliance records and audit-ready history so finance and ops share one trail.',
     tags: ['Documents', 'Compliance'],
   },
   {
     title: 'Approval & notification automation',
     description:
-      'Role-based approval pipelines with event-driven email notifications, escalation visibility, and controlled action paths.',
+      'Role-based approval pipelines with event-driven email notifications, escalation visibility and controlled action paths across business units.',
     tags: ['Automation', 'RBAC'],
   },
   {
     title: 'Cloud-connected integrations',
     description:
-      'Enterprise workflows wired to GCP-connected components for secure data exchange, automation, and reporting continuity.',
+      'Wired enterprise workflows to GCP-connected components for secure data exchange, automation and reporting continuity under production load.',
     tags: ['GCP', 'Integrations'],
   },
   {
     title: 'Logistics & fleet operations',
     description:
-      'Process modules for dispatch, tracking visibility, and multi-step transport operations in production.',
+      'Delivered process modules for dispatch, tracking visibility and multi-step transport operations running in live logistics environments.',
     tags: ['Logistics', 'Operations'],
   },
   {
     title: 'RFID & NFC-enabled workflows',
     description:
-      'RFID and NFC capture integrated into logistics and event-style operations for faster tracking and cleaner data.',
+      'Integrated RFID and NFC capture into logistics and event-style operations for faster tracking and cleaner field data.',
     tags: ['RFID', 'NFC'],
   },
   {
     title: 'Hardware-assisted inventory',
     description:
-      'Stock workflows linked to readers, scanners, and weight-linked stations for reliable movement verification.',
+      'Linked stock workflows to readers, scanners and weight-linked stations so movement verification matches what the floor actually sees.',
     tags: ['Hardware', 'Inventory'],
   },
   {
     title: 'Multi-tenant operational platforms',
     description:
-      'Configurable, tenant-aware modules with role-based access and process separation across organizations.',
+      'Shipped configurable, tenant-aware modules with role-based access and process separation across organizations on shared platforms.',
     tags: ['Multi-tenant', 'SaaS'],
   },
   {

@@ -1,12 +1,12 @@
 # Portfolio
 
-Public portfolio site for **Lordwill Kandiro** — full-stack engineer (Spring Boot, Angular, enterprise platforms, OSS biomedical/agent tooling).
+Public portfolio site for **Lordwill Kandiro**: Java / Spring Boot / Angular engineer building enterprise production platforms, with merged upstream contributions and public OSS projects.
 
 **Live site:** [https://portfolio.lordkay.com](https://portfolio.lordkay.com)
 
 **Source:** [github.com/LordKay-sudo/portfolio](https://github.com/LordKay-sudo/portfolio)
 
-Featured open-source work on the site includes a [merged Angular compiler-cli bugfix](https://github.com/angular/angular/pull/69548), [OntoHarness](https://github.com/LordKay-sudo/ontoharness), [GapForge](https://github.com/LordKay-sudo/gapforge), [BioInsight Graph](https://github.com/LordKay-sudo/bioinsight-graph), and [PeerLens](https://github.com/LordKay-sudo/peerlens).
+Open-source proof on the site includes merged PRs in [Angular](https://github.com/angular/angular/pull/69548), [Spring Boot](https://github.com/spring-projects/spring-boot/pull/50886) and [Embabel](https://github.com/embabel/embabel-agent/pull/1773), plus personal projects such as [OntoHarness](https://github.com/LordKay-sudo/ontoharness), [GapForge](https://github.com/LordKay-sudo/gapforge), [BioInsight Graph](https://github.com/LordKay-sudo/bioinsight-graph) and [PeerLens](https://github.com/LordKay-sudo/peerlens).
 
 ---
 
@@ -18,7 +18,7 @@ Pushes to `main` run [`.github/workflows/deploy-github-pages.yml`](.github/workf
 - **Build:** `npm ci && npm run build -- --configuration production`
 - **Artifact:** `dist/portfolio/browser`
 
-After changing `portfolio.data.ts`, push to `main` — the live site updates in ~1 minute.
+After changing `portfolio.data.ts`, push to `main` and the live site updates in ~1 minute.
 
 ---
 
