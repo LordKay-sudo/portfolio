@@ -21,7 +21,7 @@ export const HERO_SUBTITLE =
 export const SUMMARY =
   'More than five years building and supporting enterprise web platforms on Spring Boot, Spring Data JPA, Hibernate, Angular and relational databases. Day-to-day work covers order flows, approvals, logistics, multi-tenant modules, document-linked transactions and the APIs that keep them connected. Outside that delivery, I contribute merged fixes and features to major open-source projects. I care about release safety, clear access control and code other people can still run months later.';
 
-export type SkillCategory = 'Backend' | 'Frontend' | 'Data' | 'Cloud' | 'Tools';
+export type SkillCategory = 'Backend' | 'Frontend' | 'Data' | 'Cloud' | 'Tools' | 'AI';
 
 export interface SkillChip {
   readonly title: string;
@@ -30,7 +30,7 @@ export interface SkillChip {
   readonly category: SkillCategory;
 }
 
-export const SKILL_CATEGORIES = ['All', 'Backend', 'Frontend', 'Data', 'Cloud', 'Tools'] as const;
+export const SKILL_CATEGORIES = ['All', 'Backend', 'Frontend', 'Data', 'Cloud', 'Tools', 'AI'] as const;
 
 export type SkillFilter = (typeof SKILL_CATEGORIES)[number];
 
@@ -47,9 +47,6 @@ export const SKILL_CHIPS: readonly SkillChip[] = [
   { title: 'PostgreSQL', link: 'https://www.postgresql.org', category: 'Data' },
   { title: 'MongoDB', link: 'https://www.mongodb.com', category: 'Data' },
   { title: 'Flyway', link: 'https://flywaydb.org', category: 'Data' },
-  { title: 'Amazon Bedrock', link: 'https://aws.amazon.com/bedrock/', category: 'Cloud' },
-  { title: 'Knowledge Bases & RAG', link: 'https://aws.amazon.com/bedrock/knowledge-bases/', category: 'Cloud' },
-  { title: 'Spring AI', link: 'https://spring.io/projects/spring-ai', category: 'Cloud' },
   { title: 'AWS', link: 'https://aws.amazon.com', category: 'Cloud' },
   { title: 'GCP', link: 'https://cloud.google.com', category: 'Cloud' },
   { title: 'Maven', link: 'https://maven.apache.org', category: 'Tools' },
@@ -57,6 +54,12 @@ export const SKILL_CHIPS: readonly SkillChip[] = [
   { title: 'Jenkins', link: 'https://jenkins.io', category: 'Tools' },
   { title: 'Linux / Windows ops', link: null, category: 'Tools' },
   { title: 'Python', link: 'https://www.python.org', category: 'Backend' },
+  { title: 'Vector databases', link: 'https://aws.amazon.com/what-is/vector-databases/', category: 'AI' },
+  { title: 'Embabel', link: 'https://github.com/embabel/embabel-agent', category: 'AI' },
+  { title: 'Spring AI', link: 'https://spring.io/projects/spring-ai', category: 'AI' },
+  { title: 'LangGraph', link: 'https://langchain-ai.github.io/langgraph/', category: 'AI' },
+  { title: 'Amazon Bedrock', link: 'https://aws.amazon.com/bedrock/', category: 'AI' },
+  { title: 'Amazon Knowledge Bases', link: 'https://aws.amazon.com/bedrock/knowledge-bases/', category: 'AI' },
 ];
 
 /** Public / open-source pieces that hiring managers can click through. */
