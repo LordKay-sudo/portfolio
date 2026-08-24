@@ -94,6 +94,13 @@ export const FEATURED_WORK: readonly FeaturedWork[] = [
     stack: 'Java / Spring Boot Test / merged PR',
   },
   {
+    title: 'Embabel streaming probe cache',
+    description:
+      'Merged fix in embabel/embabel-agent: memoize ChatModel streaming capability probes so PromptRunner and LlmService share one cache and skip repeat probes.',
+    href: 'https://github.com/embabel/embabel-agent/pull/1927',
+    stack: 'Kotlin / LLM / merged PR',
+  },
+  {
     title: 'Embabel MCP Actuator health',
     description:
       'Merged feature in embabel/embabel-agent: expose MCP server readiness through Spring Boot Actuator with configurable tool thresholds.',
