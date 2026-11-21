@@ -19,7 +19,7 @@ export const HERO_SUBTITLE =
   'I ship enterprise platforms (ERP workflows, secure APIs, integrations) and contribute upstream to Angular, Spring Boot and Embabel.';
 
 export const SUMMARY =
-  'More than five years building and supporting enterprise web platforms on Spring Boot, Spring Data JPA, Hibernate, Angular and relational databases. Day-to-day work covers order flows, approvals, logistics, multi-tenant modules, document-linked transactions and the APIs that keep them connected. Outside that delivery, I contribute merged fixes and features to major open-source projects. I care about release safety, clear access control and code other people can still run months later.';
+  'About six years building and supporting enterprise web platforms on Spring Boot, Angular, Next.js and relational databases, with a hybrid persistence layer: Spring Data JPA (Hibernate) where aggregate mapping helps, and Spring Data JDBC where a thinner SQL mapping is enough. Day-to-day work covers order flows, approvals, logistics, multi-tenant modules, education and messaging platforms, document-linked transactions and the APIs that keep them connected. Outside that delivery, I contribute merged fixes and features to major open-source projects. I care about release safety, clear access control and code other people can still run months later.';
 
 export type SkillCategory = 'Backend' | 'Frontend' | 'Data' | 'Cloud' | 'Tools' | 'AI';
 
@@ -38,9 +38,11 @@ export const SKILL_CHIPS: readonly SkillChip[] = [
   { title: 'Java', link: 'https://dev.java', category: 'Backend' },
   { title: 'Spring Boot', link: 'https://spring.io/projects/spring-boot', category: 'Backend' },
   { title: 'Spring Security', link: 'https://spring.io/projects/spring-security', category: 'Backend' },
-  { title: 'Spring Data / JPA', link: 'https://spring.io/projects/spring-data-jpa', category: 'Backend' },
+  { title: 'Spring Data JPA', link: 'https://spring.io/projects/spring-data-jpa', category: 'Backend' },
+  { title: 'Spring Data JDBC', link: 'https://spring.io/projects/spring-data-jdbc', category: 'Backend' },
   { title: 'REST APIs', link: null, category: 'Backend' },
   { title: 'Angular', link: 'https://angular.dev', category: 'Frontend' },
+  { title: 'Next.js', link: 'https://nextjs.org', category: 'Frontend' },
   { title: 'TypeScript', link: 'https://www.typescriptlang.org', category: 'Frontend' },
   { title: 'HTML / CSS', link: null, category: 'Frontend' },
   { title: 'MySQL', link: 'https://www.mysql.com', category: 'Data' },
@@ -49,9 +51,13 @@ export const SKILL_CHIPS: readonly SkillChip[] = [
   { title: 'Flyway', link: 'https://flywaydb.org', category: 'Data' },
   { title: 'AWS', link: 'https://aws.amazon.com', category: 'Cloud' },
   { title: 'GCP', link: 'https://cloud.google.com', category: 'Cloud' },
+  { title: 'Docker', link: 'https://www.docker.com', category: 'Tools' },
+  { title: 'Prometheus', link: 'https://prometheus.io', category: 'Tools' },
+  { title: 'Grafana', link: 'https://grafana.com', category: 'Tools' },
   { title: 'Maven', link: 'https://maven.apache.org', category: 'Tools' },
   { title: 'Git', link: 'https://git-scm.com', category: 'Tools' },
   { title: 'Jenkins', link: 'https://jenkins.io', category: 'Tools' },
+  { title: 'GitHub Actions', link: 'https://github.com/features/actions', category: 'Tools' },
   { title: 'Linux / Windows ops', link: null, category: 'Tools' },
   { title: 'Python', link: 'https://www.python.org', category: 'Backend' },
   { title: 'Vector databases', link: 'https://aws.amazon.com/what-is/vector-databases/', category: 'AI' },
@@ -226,6 +232,66 @@ export const SELECTED_PROJECTS: readonly SelectedProject[] = [
     description:
       'Production support and ongoing improvements for a monitoring platform used by banks and payment processors.',
     tags: ['Monitoring', 'Financial services'],
+  },
+  {
+    title: 'Multi-tenant education platforms',
+    description:
+      'Rewrote and shipped school operations platforms from legacy stacks to Spring Boot APIs and modern staff portals, with tenant isolation so each organisation keeps its own students, fees and staff data.',
+    tags: ['Education', 'SaaS'],
+  },
+  {
+    title: 'Role-based school operations',
+    description:
+      'Delivered teacher, finance and admin workspaces with JWT auth, capability gates and protected fee and receipt records used daily by school staff.',
+    tags: ['RBAC', 'Finance'],
+  },
+  {
+    title: 'Offline-capable parent & student access',
+    description:
+      'Built parent and student portals that keep working when connectivity drops, with sync paths that do not corrupt live school records.',
+    tags: ['Offline', 'Portals'],
+  },
+  {
+    title: 'Prepaid SMS messaging platforms',
+    description:
+      'Designed and shipped multi-tenant prepaid SMS with wallet balances, reseller allocation, idempotent top-ups and oversell protection with audit history.',
+    tags: ['SMS', 'Wallets'],
+  },
+  {
+    title: 'Payment gateway billing integrations',
+    description:
+      'Wired subscription billing and credit top-ups to payment gateways so schools and messaging tenants can pay and reconcile without manual ledger work.',
+    tags: ['Payments', 'Integrations'],
+  },
+  {
+    title: 'Production observability',
+    description:
+      'Provisioned Prometheus scrapes of Spring Actuator metrics and Grafana dashboards for JVM, HTTP and host signals across staging and production hosts.',
+    tags: ['Prometheus', 'Grafana'],
+  },
+  {
+    title: 'Live tenant migrations & releases',
+    description:
+      'Ran controlled data migrations and CI/CD releases so organisations kept operating while moving onto new APIs, portals and schemas.',
+    tags: ['Migrations', 'CI/CD'],
+  },
+  {
+    title: 'Platform support & knowledge base',
+    description:
+      'Shipped support ticket flows and knowledge-base tooling so operators and schools can raise issues, track progression and find answers without phone-only escalation.',
+    tags: ['Support', 'Ops'],
+  },
+  {
+    title: 'Source-citing document search',
+    description:
+      'Built document search that moved from lexical retrieval to RAG with OCR and cloud knowledge bases, so answers point back to passages users can check.',
+    tags: ['RAG', 'Search'],
+  },
+  {
+    title: 'Age-aware learning GenAI',
+    description:
+      'Integrated generative AI and retrieval into education workflows with age-aware guardrails so primary and secondary students get suitable, grounded help.',
+    tags: ['GenAI', 'Education'],
   },
 ];
 
