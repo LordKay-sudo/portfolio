@@ -41,6 +41,8 @@ export const SKILL_CHIPS: readonly SkillChip[] = [
   { title: 'Spring Data JPA', link: 'https://spring.io/projects/spring-data-jpa', category: 'Backend' },
   { title: 'Spring Data JDBC', link: 'https://spring.io/projects/spring-data-jdbc', category: 'Backend' },
   { title: 'REST APIs', link: null, category: 'Backend' },
+  { title: 'Microservices', link: null, category: 'Backend' },
+  { title: 'Apache Kafka', link: 'https://kafka.apache.org', category: 'Backend' },
   { title: 'Angular', link: 'https://angular.dev', category: 'Frontend' },
   { title: 'Next.js', link: 'https://nextjs.org', category: 'Frontend' },
   { title: 'TypeScript', link: 'https://www.typescriptlang.org', category: 'Frontend' },
@@ -256,6 +258,12 @@ export const SELECTED_PROJECTS: readonly SelectedProject[] = [
     description:
       'Designed and shipped multi-tenant prepaid SMS with wallet balances, reseller allocation, idempotent top-ups and oversell protection with audit history.',
     tags: ['SMS', 'Wallets'],
+  },
+  {
+    title: 'Event-driven messaging microservices',
+    description:
+      'Ran production messaging stacks as separate services behind an API gateway, with Kafka for async hand-off between billing, dispatch, delivery reports and notifications.',
+    tags: ['Kafka', 'Microservices'],
   },
   {
     title: 'Payment gateway billing integrations',
